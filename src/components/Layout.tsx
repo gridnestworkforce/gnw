@@ -144,8 +144,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="space-y-3 text-sm">
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <a href="mailto:gridnestworkforce@gmail.com" className="opacity-90 hover:underline">
-              gridnestworkforce@gmail.com
+            <a href="mailto:business@gridnestworkforce.in" className="opacity-90 hover:underline">
+              business@gridnestworkforce.in
             </a>
           </div>
           <div className="flex items-center space-x-2">
