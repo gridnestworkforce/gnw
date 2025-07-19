@@ -177,50 +177,66 @@ export default function Contact() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Email</h3>
-                      <p className="text-muted-foreground">gridnestworkforce@gmail.com</p>
-                      <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
-                    </div>
-                  </div>
+  {/* Email */}
+  <div className="flex items-start space-x-4">
+    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+      <Mail className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h3 className="font-semibold">Email</h3>
+      <a href="mailto:business@gridnestworkforce.in" className="text-muted-foreground hover:underline">
+        business@gridnestworkforce.in
+      </a>
+      <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Phone</h3>
-                      <p className="text-muted-foreground">+91-9980026516</p>
-                      <p className="text-sm text-muted-foreground">Mon-Sat, 9:00 AM - 7:00 PM</p>
-                    </div>
-                  </div>
+  {/* Phone */}
+  <div className="flex items-start space-x-4">
+    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+      <Phone className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h3 className="font-semibold">Phone</h3>
+      <a href="tel:+919980026516" className="text-muted-foreground hover:underline">
+        +91-9980026516
+      </a>
+      <p className="text-sm text-muted-foreground">Mon-Sat, 9:00 AM - 7:00 PM</p>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Location</h3>
-                      <p className="text-muted-foreground">Ejipura, Bangalore</p>
-                      <p className="text-sm text-muted-foreground">Karnataka, India</p>
-                    </div>
-                  </div>
+  {/* Location */}
+  <div className="flex items-start space-x-4">
+    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+      <MapPin className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h3 className="font-semibold">Location</h3>
+      <a
+        href="https://www.google.com/maps/place/Ejipura,+Bangalore"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-muted-foreground hover:underline"
+      >
+        Ejipura, Bangalore
+      </a>
+      <p className="text-sm text-muted-foreground">Karnataka, India</p>
+    </div>
+  </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <Clock className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Business Hours</h3>
-                      <p className="text-muted-foreground">Sunday - Saturday</p>
-                      <p className="text-sm text-muted-foreground">10:00 AM - 10:00 PM IST</p>
-                    </div>
-                  </div>
-                </CardContent>
+  {/* Business Hours */}
+  <div className="flex items-start space-x-4">
+    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+      <Clock className="h-6 w-6 text-white" />
+    </div>
+    <div>
+      <h3 className="font-semibold">Business Hours</h3>
+      <p className="text-muted-foreground">Sunday - Saturday</p>
+      <p className="text-sm text-muted-foreground">10:00 AM - 10:00 PM IST</p>
+    </div>
+  </div>
+</CardContent>
+
               </Card>
 
               <Card className="border-0 shadow-card bg-gradient-primary text-white">

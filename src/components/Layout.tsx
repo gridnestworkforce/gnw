@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/gnw_logo.png";
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,8 +13,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Industries", href: "/industries" },
-    { name: "Leadership", href: "/leadership" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -25,16 +25,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-              <div>
-                <h1 className="font-bold text-xl text-primary">GridNest</h1>
-                <p className="text-xs text-muted-foreground -mt-1">Workforce</p>
-              </div>
-            </Link>
+            
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="GridNest Logo"
+              className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
+            />
+          </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-20">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -96,71 +97,83 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-white/20 rounded-lg"></div>
-                <div>
-                  <h3 className="font-bold text-lg">GridNest</h3>
-                  <p className="text-sm opacity-90">Workforce</p>
-                </div>
-              </div>
-              <p className="text-sm opacity-90">
-                Powering Teams. Structuring Growth.
-              </p>
-            </div>
+  <div className="container mx-auto px-4 py-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/about" className="opacity-90 hover:opacity-100">About Us</Link></li>
-                <li><Link to="/services" className="opacity-90 hover:opacity-100">Services</Link></li>
-                <li><Link to="/industries" className="opacity-90 hover:opacity-100">Industries</Link></li>
-                <li><Link to="/leadership" className="opacity-90 hover:opacity-100">Leadership</Link></li>
-              </ul>
-            </div>
+      {/* Company Info */}
+      <div className="flex space-y-4 m-auto flex-col text-center">
+        <img
+          src={logo}
+          alt="GridNest Workforce Logo"
+          className=" w-[50%] h-auto object-contain rounded-lg"
+        />
+        <p className="text-sm w-[50%] opacity-90">
+        </p>
+      </div>
 
-            {/* Services */}
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="opacity-90">Manpower Supply</li>
-                <li className="opacity-90">CX & Call Center Support</li>
-                <li className="opacity-90">Operational Staffing</li>
-                <li className="opacity-90">Workforce Management</li>
-              </ul>
-            </div>
+      {/* Quick Links */}
+      <div>
+        <h4 className="font-semibold mb-4">Quick Links</h4>
+        <ul className="space-y-2 text-sm">
+          <li>
+            <Link to="/about" className="opacity-90 hover:opacity-100">About Us</Link>
+          </li>
+          <li>
+            <Link to="/services" className="opacity-90 hover:opacity-100">Services</Link>
+          </li>
+          <li>
+            <Link to="/industries" className="opacity-90 hover:opacity-100">Industries</Link>
+          </li>
+          <li>
+            <Link to="/leadership" className="opacity-90 hover:opacity-100">Leadership</Link>
+          </li>
+        </ul>
+      </div>
 
-            {/* Contact Info */}
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <span className="opacity-90">gridnestworkforce@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" />
-                  <span className="opacity-90">+91-9980026516</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4" />
-                  <span className="opacity-90">Indiranagar, Bangalore</span>
-                </div>
-              </div>
-            </div>
+      {/* Services */}
+      <div>
+        <h4 className="font-semibold mb-4">Services</h4>
+        <ul className="space-y-2 text-sm">
+          <li className="opacity-90">Manpower Supply</li>
+          <li className="opacity-90">CX & Call Center Support</li>
+          <li className="opacity-90">Operational Staffing</li>
+          <li className="opacity-90">Workforce Management</li>
+        </ul>
+      </div>
+
+      {/* Contact Info */}
+      <div>
+        <h4 className="font-semibold mb-4">Contact</h4>
+        <div className="space-y-3 text-sm">
+          <div className="flex items-center space-x-2">
+            <Mail className="h-4 w-4" />
+            <a href="mailto:gridnestworkforce@gmail.com" className="opacity-90 hover:underline">
+              gridnestworkforce@gmail.com
+            </a>
           </div>
-
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
-            <p className="text-sm opacity-90">
-              © 2024 GridNest Workforce. All rights reserved.
-            </p>
+          <div className="flex items-center space-x-2">
+            <Phone className="h-4 w-4" />
+            <a href="tel:+919980026516" className="opacity-90 hover:underline">
+              +91-9980026516
+            </a>
+          </div>
+          <div className="flex items-center space-x-2">
+            <MapPin className="h-4 w-4" />
+            <span className="opacity-90">Indiranagar, Bangalore</span>
           </div>
         </div>
-      </footer>
+      </div>
+    </div>
+
+    {/* Footer Bottom */}
+    <div className="border-t border-white/20 mt-10 pt-6 text-center">
+      <p className="text-sm opacity-90">
+        © 2024 GridNest Workforce. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
