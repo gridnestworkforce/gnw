@@ -246,7 +246,9 @@ export default function Contact() {
                     For urgent staffing requirements or emergency support, call us directly.
                   </p>
                   <Button variant="hero" className="w-full bg-white text-primary hover:bg-white/90">
-                    Call Now
+                    <a href="tel:+919980026516" className="opacity-90 hover:underline">
+              CALL NOW
+            </a>
                   </Button>
                 </CardContent>
               </Card>
