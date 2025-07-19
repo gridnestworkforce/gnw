@@ -122,10 +122,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/services" className="opacity-90 hover:opacity-100">Services</Link>
           </li>
           <li>
-            <Link to="/industries" className="opacity-90 hover:opacity-100">Industries</Link>
-          </li>
-          <li>
-            <Link to="/leadership" className="opacity-90 hover:opacity-100">Leadership</Link>
+            <Link to="/contact" className="opacity-90 hover:opacity-100">Contact</Link>
           </li>
         </ul>
       </div>
@@ -159,7 +156,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <div className="flex items-center space-x-2">
             <MapPin className="h-4 w-4" />
-            <span className="opacity-90">Indiranagar, Bangalore</span>
+            <a
+              href="https://www.google.com/maps/place/Ejipura,+Bangalore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" hover:underline"
+            >
+              Ejipura, Bangalore
+            </a>
           </div>
         </div>
       </div>
